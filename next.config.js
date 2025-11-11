@@ -1,7 +1,15 @@
 // next.config.js
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // turbo kısmını tamamen kaldır
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "image.tmdb.org",
+        pathname: "**",
+      },
+    ],
+  },
 };
 
 module.exports = nextConfig;
